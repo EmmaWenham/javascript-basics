@@ -1,61 +1,84 @@
 const getNthElement = (index, array) => {
-  // your code here
+ return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return [...array, element];
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(number => number.toString());
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => string.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
-};
+  return strings.map(string => string.split("").reverse().join(""));
+  };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(n => n % 2 == 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter((string, idx) => index !== idx);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    return strings.filter((string) => {
+        for (var vowel of vowels) {
+            if (string.toLowerCase().startsWith(vowel)) {
+                return true;
+            }
+        }
+
+        return false;
+    });
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((acc, number) => acc += number, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => {
+    let lastA = a[a.length - 1];
+    let lastB = b[b.length - 1];
+
+    if (lastA < lastB) {
+      return -1;
+    }
+    if (lastA > lastB) {
+      return 1;
+    }
+    
+    // a must be equal to b
+    return 0;
+  });
 };
 
 module.exports = {
