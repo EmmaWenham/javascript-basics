@@ -24,7 +24,7 @@ const removeNthElement = (index, array) => {
 
 const numbersToStrings = numbers => {
   return numbers.map(number => number.toString());
-};
+};      
 
 const uppercaseWordsInArray = strings => {
   return strings.map(string => string.toUpperCase());
